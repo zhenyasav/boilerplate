@@ -1,0 +1,51 @@
+@import 'for.import.less';
+
+.colors(@base) {
+
+	@one: @base;
+	@two: spin(@base, 180);
+	@three: spin(@base, 60);
+	@four: spin(@base, 180 + 60);
+	@five: spin(@base, 120);
+	@six: spin(@base, 180 + 120);
+
+	@orange: #FF9933;
+	@darkblue: #0072B2;
+	@blue: #00A3FF;
+	@cyan: #47e9e9;
+	@red: #FF1924;
+	@green: #A8E30B;
+	@yellow: #FFEF36;
+	@pink: #ff6699;
+	@magenta: #FF00FF;
+	@violet: #9400D3;
+	@purple: #5C00EA;
+
+	.swatches(@colors) {
+		.for(@colors); .-each(@color) {
+			.@{color} {
+				background-color: @@color;
+				color: contrast(@@color);
+				font-size: 12px;
+			}
+		}
+	}
+
+	.color-swatches {
+		@swatch: 30px;
+	
+		max-width: 512px;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 30px;
+
+		.color-swatch {
+			width: @swatch;
+			height: @swatch;
+			display: inline-block; 
+		}
+		.swatches(one two three four five six);
+	}
+}
