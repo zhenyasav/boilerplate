@@ -1,6 +1,4 @@
-tilde = 192
-
 Meteor.startup ->
 	$(window).on 'keyup', (e) ->
-		if e.keyCode is tilde
+		if e.keyCode is Utils.keys.tilde
 			$('html').toggleClass 'debug'
