@@ -10,7 +10,6 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  //api.versionsFrom('1.0.3.1');
   
   api.use([
     'less', 
@@ -19,14 +18,13 @@ Package.onUse(function(api) {
     'templating',
     'iron:router@1.0.7']);
 
-  //api.use(['iron:router@1.0.7'], {weak:true});
-
   api.addFiles(['utils.coffee']);
 
   api.addFiles([
     'colors.import.less',
     'shades.import.less',
     'utils.import.less',
+    'reset.import.less',
     'for.import.less',
     'all.import.less',
     'helpers.coffee',
