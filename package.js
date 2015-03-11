@@ -26,6 +26,7 @@ Package.onUse(function(api) {
     'utils.import.less',
     'reset.import.less',
     'for.import.less',
+    'clearfix.import.less',
     'all.import.less',
     'helpers.coffee',
     'colors.html',

@@ -1,0 +1,13 @@
+.clearfix(@name) {
+	.@{name}:before,
+	.@{name}:after {
+	    content: "";
+	    display: table;
+	} 
+	.@{name}:after {
+	    clear: both;
+	}
+	.@{name} {
+	    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+	}
+}
