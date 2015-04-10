@@ -18,6 +18,8 @@ Package.onUse(function(api) {
     'templating',
     'iron:router@1.0.7']);
 
+  api.imply('iron:router@1.0.7');
+
   api.addFiles(['utils.coffee']);
 
   api.addFiles([
