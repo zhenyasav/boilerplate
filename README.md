@@ -57,6 +57,12 @@ Based on the plurality of the number n, pluralize or singularize string s
 
 ### `Utils.log(...)`
 Pass the arguments to `console.log` and return the last argument. Useful for logging values inside chained function calls.
+``` coffee
+# to look inside a chain of calls like:
+_.uniq _.map array, (n) -> n**2
+# use Utils.log:
+_.uniq Utils.log 'mapped array', _.map array, (n) -> n**2
+```
 
 ### `Utils.keys`
 An object with some common keycodes like space, enter and shift. Suitable for use in event handlers like `keyup`.
