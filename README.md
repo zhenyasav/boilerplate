@@ -59,9 +59,17 @@ Based on the plurality of the number n, pluralize or singularize string s
 Pass the arguments to `console.log` and return the last argument. Useful for logging values inside chained function calls.
 ``` coffee
 # to look inside a chain of calls like:
+array = [0..2]
 _.uniq _.map array, (n) -> n**2
 # use Utils.log:
-_.uniq Utils.log 'mapped array', _.map array, (n) -> n**2
+_.uniq Utils.log 'mapped array', _.map array, (n) -> Utils.log 'element', n**2
+```
+Output:
+```
+element 0
+element 1
+element 4
+mapped array [0, 1, 4]
 ```
 
 ### `Utils.keys`
