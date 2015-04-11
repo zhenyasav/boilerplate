@@ -13,9 +13,7 @@ Package.onUse(function(api) {
     'coffeescript', 
     'underscore', 
     'templating',
-    'iron:router@1.0.7']);
-
-  api.imply('iron:router@1.0.7');
+    'iron:router']);
 
   api.addFiles(['utils.coffee']);
 
