@@ -76,7 +76,14 @@ Gives access to:
 @dark: mix(@w, @b, 10%);
 @black: @b;
 ```
+## Color preview
 To test your available colors, call the templates `{{>_colors}}` and `{{>_shades}}` anywhere to see color swatches.
+
+## reset.import.less
+Provides a basic CSS reset useful for building full screen apps.
+``` less
+.reset()
+```
 
 # Utils
 Defines (or extends) a global utility `Utils`:
