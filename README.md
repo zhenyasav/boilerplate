@@ -11,7 +11,7 @@ Import `all.import.less` or any one of the stylesheets like this:
 Imports all the other less imports in this package
 
 ## for.import.less
-Implements a for and foreach loop for LESS. Sourced from: https://github.com/seven-phases-max/less.curious/blob/master/articles/for-each.md
+Implements a for and foreach loop for LESS. More usage examples at [less.curious](https://github.com/seven-phases-max/less.curious/blob/master/articles/for-each.md).
 
 ``` less
 @list: banana, apple, pear, potato, carrot, peach;
@@ -85,6 +85,9 @@ Provides a basic CSS reset useful for building full screen apps.
 // call this somewhere in your project less
 .reset()
 ```
+
+## Debug CSS
+Unless `Meteor.settings.public.debugCss == false`, pressing `Ctrl+~` (Control + tilde) will show outlines on all dom elements making it easier to inspect structure and CSS problems at a glance.
 
 # Utils
 Defines (or extends) a global utility `Utils`:
@@ -165,9 +168,34 @@ A cheap trick to replace all `click` handlers with `touchend` in case touch is s
 
 ### `Utils.keys`
 An object with some common keycodes like space, enter and shift. Suitable for use in event handlers like `keyup`.
+``` coffee
+Utils.keys =
+	tilde: 192
+	esc: 27
+	enter: 13
+	space: 32
+	shift: 16
+	ctrl: 17
+	alt: 18
+	cmd: 91
+```
 
 ### `Utils.colors`
 Hex color codes for some common colors.
+``` coffee
+Utils.colors =
+	orange: '#FF9933'
+	darkblue: '#0072B2'
+	blue: '#00A3FF'
+	cyan: '#47e9e9'
+	red: '#FF1924'
+	green: '#A8E30B'
+	yellow: '#FFEF36'
+	pink: '#ff6699'
+	magenta: '#FF00FF'
+	violet: '#9400D3'
+	purple: '#5C00EA'
+```
 
 ### `Utils.spellNumber(n)`
 If the number is less than 10, it is spelled in letters like "five". If not, the argument is returned.
