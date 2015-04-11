@@ -1,6 +1,34 @@
 # Less Coffee Meteor Boilerplate
 If you're building your app with Coffee and Less, you might find these includes and utilities useful.
 
+# Less imports
+Import `all.import.less` or any one of the stylesheets like this:
+`@import '/packages/zhenya:boilerplate/all.import.less';`
+
+### all.import.less
+Imports all the other less imports in this package
+
+### for.import.less
+Implements a for and foreach loop for LESS:
+Foreach:
+``` less
+@list: banana, apple, pear, potato, carrot, peach;
+
+#basic-usage {
+    .for(@list); .-each(@value) {
+        value: @value;
+    }
+}
+```
+For:
+``` less
+#basic-usage {
+    .for(6); .-each(@i) {
+        i: @i;
+    }
+}
+```
+
 # Utils
 Defines (or extends) a global utility `Utils`:
 
