@@ -82,6 +82,7 @@ To test your available colors, call the templates `{{>_colors}}` and `{{>_shades
 ## reset.import.less
 Provides a basic CSS reset useful for building full screen apps.
 ``` less
+// call this somewhere in your project less
 .reset()
 ```
 
