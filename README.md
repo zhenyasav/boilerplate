@@ -3,6 +3,9 @@ If you're building your app with Coffee and Less, you might find these includes 
 
 # Contents
 - [Less imports](#less-imports)
+	- [all.import.less](#allimportless)
+	- [for.import.less](#forimportless)
+	- [clearfix.import.less](#cleafiximportless)
 
 # Less imports
 Import `all.import.less` or any one of the stylesheets like this:
@@ -10,10 +13,10 @@ Import `all.import.less` or any one of the stylesheets like this:
 @import '/packages/zhenya:boilerplate/all.import.less';
 ```
 
-## all.import.less
+## [all.import.less](all.import.less)
 Imports all the other less imports in this package
 
-## for.import.less
+## [for.import.less](for.import.less)
 Implements a for and foreach loop in LESS. More usage examples at [less.curious](https://github.com/seven-phases-max/less.curious/blob/master/articles/for-each.md).
 
 ``` less
@@ -33,7 +36,7 @@ Implements a for and foreach loop in LESS. More usage examples at [less.curious]
 }
 ```
 
-## clearfix.import.less
+## [clearfix.import.less](clearfix.import.less)
 Implements a basic clearfix method with a less function that applies the clearfix to any class of choice.
 ``` less
 .clearfix(foo);
