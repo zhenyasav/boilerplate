@@ -31,7 +31,7 @@ A shortcut for `Utils.tag 'span'`
 Converts string s for use in a css class attribute, by first lowering case, then replacing spaces with dashes.
 
 ### `Utils.delay(n, f)`
-A convenience method to reverse the order of arguments in `setTimeout` such that it's more palateable to use in CoffeeScript.
+A convenience method to reverse the order of arguments in `setTimeout` such that it's more palatable to use in CoffeeScript.
 Instead of:
 ``` coffee
 Meteor.setTimeout ->
@@ -42,6 +42,21 @@ Now use:
 ``` coffee
 Utils.delay 1000, -> #do something
 ```
+
+### `Utils.capitalize(s)`
+Capitalize the string s
+
+### `Utils.singular(s)`
+Remove the trailing 's' if it exists
+
+### `Utils.plural(s)`
+Add a trailing 's' if it doesn't exist
+
+### `Utils.pluralize(n, s)`
+Based on the plurality of the number n, pluralize or singularize string s
+
+### `Utils.log(...)`
+Pass the arguments to `console.log` and return the last argument. Useful for logging values inside chained function calls.
 
 ### `Utils.keys`
 An object with some common keycodes like space, enter and shift. Suitable for use in event handlers like `keyup`.
