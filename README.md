@@ -56,11 +56,26 @@ Gives access to the following variables:
 @purple: #5C00EA;
 ```
 
-#### `.complementary(@base);`
-Create a five color complementary color scheme with `@base` as the root color. Colors are accessible using `@one`, `@two`, `@three`, `@four`, and `@five`.
+#### `.complementary(@base: #108ee3, @shade: 20%);`
+Create a five color complementary color scheme with `@base` as the root color. Colors are accessible using `@one`, `@two`, `@three`, `@four`, and `@five`. `@shade` is used to generate secondary colors from the first two by lighten and desaturate.
 
-#### `.triad(@base);`
-Create a five color triad color scheme with `@base` as the root color. Colors are accessible using `@one`, `@two`, `@three`, `@four`, and `@five`.
+#### `.triad(@base: #108ee3, @shade: 20%);`
+Create a five color triad color scheme with `@base` as the root color. Colors are accessible using `@one`, `@two`, `@three`, `@four`, and `@five`. `@shade` is used to generate secondary colors from the second two by lighten and desaturate.
+
+### 'shades.import.less'
+Provides a function to generate seven shades and tints between a specific light and a dark color. Helpful for generating a tinted set of shades.
+
+#### `.shades(@w: #fff, @b: #000)`
+Gives access to:
+``` less
+@white: @w;
+@light: mix(@w, @b, 96%);
+@lightgray: mix(@w, @b, 85%);
+@gray: mix(@w, @b, 60%);
+@darkgray: mix(@w, @b, 30%);
+@dark: mix(@w, @b, 10%);
+@black: @b;
+```
 
 # Utils
 Defines (or extends) a global utility `Utils`:
