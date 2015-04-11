@@ -1,6 +1,9 @@
 # Less Coffee Meteor Boilerplate
 If you're building your app with Coffee and Less, you might find these includes and utilities useful.
 
+# Contents
+- [Less imports](#less-imports)
+
 # Less imports
 Import `all.import.less` or any one of the stylesheets like this:
 ``` less
