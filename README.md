@@ -30,6 +30,32 @@ Implements a for and foreach loop for LESS. Sourced from: https://github.com/sev
 }
 ```
 
+### clearfix.import.less
+Implements a basic clearfix method with a less function that applies the clearfix to any class of choice.
+``` less
+.clearfix(foo);
+```
+Applies clearfix to all `.foo` elements
+
+### colors.import.less
+Provides three functions to generate common color schemes.
+
+#### `colors();`
+Gives access to the following variables:
+``` less
+@orange: #FF9933;
+@darkblue: #0072B2;
+@blue: #00A3FF;
+@cyan: #47e9e9;
+@red: #FF1924;
+@green: #A8E30B;
+@yellow: #FFEF36;
+@pink: #ff6699;
+@magenta: #FF00FF;
+@violet: #9400D3;
+@purple: #5C00EA;
+```
+
 # Utils
 Defines (or extends) a global utility `Utils`:
 
