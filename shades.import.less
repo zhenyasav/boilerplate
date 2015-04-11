@@ -1,3 +1,5 @@
+@import 'swatches/swatches.import.less';
+
 .shades(@w: #fff, @b: #000) {
 	@white: @w;
 	@light: mix(@w, @b, 96%);
@@ -6,4 +8,6 @@
 	@darkgray: mix(@w, @b, 30%);
 	@dark: mix(@w, @b, 10%);
 	@black: @b;
+
+	.swatches(~"white" ~"light" ~"lightgray" ~"gray" ~"darkgray" ~"dark" ~"black");
 }

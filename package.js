@@ -20,6 +20,8 @@ Package.onUse(function(api) {
   api.addFiles(['utils.coffee']);
 
   api.addFiles([
+    'swatches/swatches.import.less',
+
     'colors.import.less',
     'shades.import.less',
     'utils.import.less',
@@ -27,11 +29,15 @@ Package.onUse(function(api) {
     'for.import.less',
     'clearfix.import.less',
     'all.import.less',
+    
     'helpers.coffee',
-    'colors.html',
-    'colors.coffee',
-    'debug.less',
-    'debug.coffee'
+  
+    'debug/debug.less',
+    'debug/debug.coffee',
+
+    'swatches/swatches.html',
+    'swatches/swatches.coffee'
+
     ], 'client');
 
 });

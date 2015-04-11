@@ -1,0 +1,19 @@
+<template name="_colors">
+	<div class="color-swatches">
+		{{#each key_value colors}}
+			<div class="{{key}} color-swatch-group">
+				{{#each value}}<div class="color-swatch {{this}}">{{this}}</div>{{/each}}
+			</div>
+		{{/each}}
+	</div>
+</template>
+
+<template name="_shades">
+	<div class="color-swatches shades">
+		{{#each key_value colors}}
+			<div class="{{key}} color-swatch-group">
+				{{#each value}}<div class="color-swatch {{this}}">{{this}}</div>{{/each}}
+			</div>
+		{{/each}}
+	</div>
+</template>

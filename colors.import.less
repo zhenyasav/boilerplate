@@ -1,13 +1,6 @@
-@import 'for.import.less';
+@import 'swatches/swatches.import.less';
 
-.colors(@base: #108EE3) {
-
-	@one: @base;
-	@two: spin(@base, 180);
-	@three: spin(@base, 60);
-	@four: spin(@base, 180 + 60);
-	@five: spin(@base, 120);
-	@six: spin(@base, 180 + 120);
+.colors() {
 
 	@orange: #FF9933;
 	@darkblue: #0072B2;
@@ -21,31 +14,28 @@
 	@violet: #9400D3;
 	@purple: #5C00EA;
 
-	.swatches(@colors) {
-		.for(@colors); .-each(@color) {
-			.@{color} {
-				background-color: @@color;
-				color: contrast(@@color);
-				font-size: 12px;
-			}
-		}
-	}
+	.swatches(~"orange" ~"darkblue" ~"blue" ~"cyan" ~"red" ~"green" ~"yellow" ~"pink" ~"magenta" ~"violet" ~"purple");
+}
 
-	.color-swatches {
-		@swatch: 30px;
+.complementary(@base: #108ee3, @shade: 20%) {
+
+	@one: @base;
+	@two: spin(@base, 180);
+	@three: desaturate(lighten(@base, @shade), @shade);
+	@four: desaturate(lighten(@two, @shade), @shade);
+	@five: darken(@base, @shade);
+
+	.swatches(one two three four five);
+}
+
+.triad(@base: #108ee3, @shade: 20%) {
 	
-		max-width: 512px;
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		margin: 30px;
+	@one: @base;
+	@two: spin(@base, 120);
+	@three: spin(@base, -120);
+	@four: desaturate(lighten(@two, @shade), @shade);
+	@five: desaturate(lighten(@three, @shade), @shade);
+	
+	.swatches(one two three four five);
 
-		.color-swatch {
-			width: @swatch;
-			height: @swatch;
-			display: inline-block; 
-		}
-		.swatches(one two three four five six);
-	}
 }
