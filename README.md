@@ -7,10 +7,10 @@ Import `all.import.less` or any one of the stylesheets like this:
 @import '/packages/zhenya:boilerplate/all.import.less';
 ```
 
-### all.import.less
+## all.import.less
 Imports all the other less imports in this package
 
-### for.import.less
+## for.import.less
 Implements a for and foreach loop for LESS. Sourced from: https://github.com/seven-phases-max/less.curious/blob/master/articles/for-each.md
 
 ``` less
@@ -30,14 +30,14 @@ Implements a for and foreach loop for LESS. Sourced from: https://github.com/sev
 }
 ```
 
-### clearfix.import.less
+## clearfix.import.less
 Implements a basic clearfix method with a less function that applies the clearfix to any class of choice.
 ``` less
 .clearfix(foo);
 ```
 Applies clearfix to all `.foo` elements
 
-### colors.import.less
+## colors.import.less
 Provides three functions to generate common color schemes.
 
 #### `.colors();`
@@ -62,7 +62,7 @@ Create a five color complementary color scheme with `@base` as the root color. C
 #### `.triad(@base: #108ee3, @shade: 20%);`
 Create a five color triad color scheme with `@base` as the root color. Colors are accessible using `@one`, `@two`, `@three`, `@four`, and `@five`. `@shade` is used to generate secondary colors from the second two by lighten and desaturate.
 
-### shades.import.less
+## shades.import.less
 Provides a function to generate seven shades and tints between a specific light and a dark color. Helpful for generating a tinted set of shades.
 
 #### `.shades(@w: #fff, @b: #000)`
