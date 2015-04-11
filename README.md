@@ -5,12 +5,21 @@ If you're building your app with Coffee and Less, you might find these includes 
 Defines (or extends) a global `Utils`:
 
 ### `Utils.tag(name)`
-Returns a function that can be used to construct tags with a CoffeeKup style syntax.
+Returns a function that can be used to construct tags with a CoffeeKup style syntax. The arguments to this function can be of any length, all but the last of which will be interpreted as attributes. The last argument will be the content if it is an array of Elements.
 ``` coffee
 div = Utils.tag 'div'
-element = div id:'abc', class:'foo bar', style:'color: blue'
-# element will be an instance of Element that represents
-# <div id="abc" class="foo bar" style="color: blue"></div>
+span = Utils.tag 'span'
+element = div id:'abc', class:'foo bar', style:'color: blue', [
+		div class:'foo'
+		span class:'bar'
+	]
+```
+The resulting element will be:
+``` html
+<div id="abc" class="foo bar" style="color: blue">
+	<div class="foo"></div>
+	<span class="bar"></span>
+</div>
 ``` 
 
 ### `Utils.keys`
