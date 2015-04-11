@@ -1,5 +1,5 @@
 
-utilHelpers = _.pick Utils, 'pluralize', 'capitalize', 'cssClass', 'spellNumber'
+utilHelpers = _.pick Utils, 'pluralize', 'capitalize', 'cssClass', 'spellNumber', 'singular', 'plural'
 
 helpers = _.extend utilHelpers, 
 

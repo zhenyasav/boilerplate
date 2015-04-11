@@ -1,8 +1,8 @@
 # Less Coffee Meteor Boilerplate
 If you're building your app with Coffee and Less, you might find these includes and utilities useful.
 
-## utils.coffee
-Defines (or extends) a global `Utils`:
+# Utils
+Defines (or extends) a global utility `Utils`:
 
 ### `Utils.tag(name)`
 Returns a function that can be used to construct Elements with a CoffeeKup style syntax. The arguments to this function can be of any length, all but the last of which will be interpreted as attributes. The last argument will be the content if it is an array of Elements.
@@ -87,6 +87,33 @@ Hex color codes for some common colors.
 ### `Utils.spellNumber(n)`
 If the number is less than 10, it is spelled in letters like "five". If not, the argument is returned.
 
+# Helpers
+The following template helpers are registered globally
+### `{{key_value obj}}`
+Decomposes `obj` into an array with objects that each have keys `key` and `value`. Useful for decomposing objects or arrays to retrieve keys or indices.
 
+### `{{currentRoute}}`
+Iron router's `Router.current()`
+
+### `{{session "key"}}`
+Returns `Session.get("key")`
+
+### `{{pluralize n s}}` 
+Same as `Utils.pluralize()`
+
+### `{{singular s}}`
+Same as `Utils.singular()`
+
+### `{{plural s}}`
+Same as `Utils.plural()`
+
+### `{{capitalize s}}`
+Same as `Utils.capitalize()`
+
+### `{{cssClass s}}`
+Same as `Utils.cssClass()`
+
+### `{{spellNumber n}}`
+Same as `Utils.spellNumber()`
 
 
