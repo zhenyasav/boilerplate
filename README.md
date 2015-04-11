@@ -12,19 +12,18 @@ Imports all the other less imports in this package
 
 ### for.import.less
 Implements a for and foreach loop for LESS:
-Foreach:
+
 ``` less
 @list: banana, apple, pear, potato, carrot, peach;
 
-#basic-usage {
+#foreach-usage {
     .for(@list); .-each(@value) {
         value: @value;
     }
 }
 ```
-For:
 ``` less
-#basic-usage {
+#for-usage {
     .for(6); .-each(@i) {
         i: @i;
     }
