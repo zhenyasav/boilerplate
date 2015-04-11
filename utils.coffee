@@ -74,7 +74,7 @@
 		console.log.apply console, arguments
 		result
 	
-	randomString: (prefix) -> (prefix?.toString() ? "") + Math.floor Math.random() * 10**10
+	randomString: (prefix, order=10) -> (prefix?.toString() ? "") + Math.floor Math.random() * 10**order
 
 	mobilizeEvents: (eventMap) ->
 		return eventMap if 'ontouchstart' not of window
