@@ -11,7 +11,7 @@ Import `all.import.less` or any one of the stylesheets like this:
 Imports all the other less imports in this package
 
 ### for.import.less
-Implements a for and foreach loop for LESS:
+Implements a for and foreach loop for LESS. Sourced from: https://github.com/seven-phases-max/less.curious/blob/master/articles/for-each.md
 
 ``` less
 @list: banana, apple, pear, potato, carrot, peach;
