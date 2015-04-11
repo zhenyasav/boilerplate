@@ -3,7 +3,9 @@ If you're building your app with Coffee and Less, you might find these includes 
 
 # Less imports
 Import `all.import.less` or any one of the stylesheets like this:
-`@import '/packages/zhenya:boilerplate/all.import.less';`
+``` less
+@import '/packages/zhenya:boilerplate/all.import.less';
+```
 
 ### all.import.less
 Imports all the other less imports in this package
