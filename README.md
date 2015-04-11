@@ -76,6 +76,7 @@ Gives access to:
 @dark: mix(@w, @b, 10%);
 @black: @b;
 ```
+To test your available colors, call the templates `{{>_colors}}` and `{{>_shades}}` anywhere to see color swatches.
 
 # Utils
 Defines (or extends) a global utility `Utils`:
