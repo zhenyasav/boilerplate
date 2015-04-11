@@ -4,15 +4,15 @@ If you're building your app with Coffee and Less, you might find these includes 
 # Contents
 - [Less imports](README.md#less-imports)
 	- [all.import.less](README.md#allimportless)
-	- [for.import.less](#forimportless)
-	- [clearfix.import.less](#cleafiximportless)
-	- [reset.import.less](#resetimportless)
-	- [colors.import.less](#colorsimportless)
-	- [shades.import.less](#shadesimportless)
-- [Color preview](#color-preview)
-- [Debug CSS](#debug-css)
-- [Utilities](#utilities)
-- [Helpers](#helpers)
+	- [for.import.less](README.md#forimportless)
+	- [clearfix.import.less](README.md#cleafiximportless)
+	- [reset.import.less](README.md#resetimportless)
+	- [colors.import.less](README.md#colorsimportless)
+	- [shades.import.less](README.md#shadesimportless)
+- [Color preview](README.md#color-preview)
+- [Debug CSS](README.md#debug-css)
+- [Utilities](README.md#utilities)
+- [Helpers](README.md#helpers)
 
 # Less imports
 Import `all.import.less` or any one of the stylesheets like this:
