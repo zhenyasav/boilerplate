@@ -37,6 +37,11 @@ Implements a basic clearfix method with a less function that applies the clearfi
 ```
 Applies clearfix to all `.foo` elements
 
+## [utils.import.less]
+### `.utils()`
+Provides some browser compatible utilities like `.border-radius()`.
+
+
 ## reset.import.less
 Provides a basic CSS reset useful for building full screen apps.
 ``` less
