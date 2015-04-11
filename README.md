@@ -76,7 +76,7 @@ mapped array [0, 1, 4]
 Generates a random string of numbers of length `order` and prefixed with `prefix`
 
 ### `Utils.mobilizeEvents(eventMap)`
-A cheap trick to replace all 'click' handlers with 'touchend' in case touch is supported. Useful in `Templat.events()` calls to avoid click emulation on mobile devices.
+A cheap trick to replace all `click` handlers with `touchend` in case touch is supported. Useful in `Template.<template>.events()` calls to avoid click emulation on mobile devices.
 
 ### `Utils.keys`
 An object with some common keycodes like space, enter and shift. Suitable for use in event handlers like `keyup`.
