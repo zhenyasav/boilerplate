@@ -1,8 +1,14 @@
-@Utils =
+@Utils = _.extend @Utils ? {},
+	
 	keys: 
 		tilde: 192
 		esc: 27
 		enter: 13
+		space: 32
+		shift: 16
+		ctrl: 17
+		alt: 18
+		cmd: 91
 
 	colors:
 		orange: '#FF9933'
@@ -34,14 +40,22 @@
 		else
 			n
 
-	span: ->
-		args = [].slice.call arguments, 0
-		content = args.splice args.length-1, 1
-		attributes = {}
-		args.map (arg) -> _.each arg, (val, key) -> attributes[key] = val
-		attrs = _.map attributes, (val, key) -> "#{key}=\"#{val}\""
-		.join ' '
-		"<span #{attrs}>#{content}</span>"
+	tag: (name) ->
+		(args...) ->
+			attr = {}
+			last = args[args.length - 1]
+			if last instanceof Element or _.isArray last
+				content = args.splice(args.length - 1, 1)?[0]
+			for arg in args
+				for key, val of arg 
+					attr[key] = val
+			el = document.createElement name
+			for a, val of attr
+				el.setAttribute a, val
+			if not _.isArray content
+				content = [content]
+			content.map (c) -> el.appendChild c if c instanceof Element
+			el
 
 	cssClass: (s) -> s?.toLowerCase?()?.replace? /\s|\./g, '-'
 
@@ -70,3 +84,6 @@
 			newMap[k.replace 'click', 'touchend'] = v
 
 		newMap 
+
+@Utils.span = Utils.tag 'span'
+@Utils.div = Utils.tag 'div'
