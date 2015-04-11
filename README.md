@@ -62,7 +62,7 @@ Create a five color complementary color scheme with `@base` as the root color. C
 #### `.triad(@base: #108ee3, @shade: 20%);`
 Create a five color triad color scheme with `@base` as the root color. Colors are accessible using `@one`, `@two`, `@three`, `@four`, and `@five`. `@shade` is used to generate secondary colors from the second two by lighten and desaturate.
 
-### 'shades.import.less'
+### shades.import.less
 Provides a function to generate seven shades and tints between a specific light and a dark color. Helpful for generating a tinted set of shades.
 
 #### `.shades(@w: #fff, @b: #000)`
