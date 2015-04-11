@@ -37,6 +37,13 @@ Implements a basic clearfix method with a less function that applies the clearfi
 ```
 Applies clearfix to all `.foo` elements
 
+## reset.import.less
+Provides a basic CSS reset useful for building full screen apps.
+``` less
+// call this somewhere in your project less
+.reset()
+```
+
 ## colors.import.less
 Provides three functions to generate common color schemes.
 
@@ -76,15 +83,9 @@ Gives access to:
 @dark: mix(@w, @b, 10%);
 @black: @b;
 ```
+
 ## Color preview
 To test your available colors, call the templates `{{>_colors}}` and `{{>_shades}}` anywhere to see color swatches.
-
-## reset.import.less
-Provides a basic CSS reset useful for building full screen apps.
-``` less
-// call this somewhere in your project less
-.reset()
-```
 
 ## Debug CSS
 Unless `Meteor.settings.public.debugCss == false`, pressing `Ctrl+~` (Control + tilde) will show outlines on all dom elements making it easier to inspect structure and CSS problems at a glance.
