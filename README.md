@@ -40,7 +40,7 @@ Applies clearfix to all `.foo` elements
 ### colors.import.less
 Provides three functions to generate common color schemes.
 
-#### `colors();`
+#### `.colors();`
 Gives access to the following variables:
 ``` less
 @orange: #FF9933;
@@ -55,6 +55,12 @@ Gives access to the following variables:
 @violet: #9400D3;
 @purple: #5C00EA;
 ```
+
+#### `.complementary(@base);`
+Create a five color complementary color scheme with `@base` as the root color. Colors are accessible using `@one`, `@two`, `@three`, `@four`, and `@five`.
+
+#### `.triad(@base);`
+Create a five color triad color scheme with `@base` as the root color. Colors are accessible using `@one`, `@two`, `@three`, `@four`, and `@five`.
 
 # Utils
 Defines (or extends) a global utility `Utils`:
