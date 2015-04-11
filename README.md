@@ -37,7 +37,7 @@ Implements a basic clearfix method with a less function that applies the clearfi
 ```
 Applies clearfix to all `.foo` elements
 
-## [utils.import.less]
+## [utils.import.less](utils.import.less)
 ### `.utils()`
 Provides some browser compatible utilities like `.border-radius()`.
 
