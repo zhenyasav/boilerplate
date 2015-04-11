@@ -8,12 +8,15 @@ Package.describe({
 
 Package.onUse(function(api) {
   
+  api.versionsFrom('1.0');
+  
   api.use([
     'less', 
     'coffeescript', 
     'underscore', 
-    'templating',
-    'iron:router']);
+    'templating']);
+
+  api.use('iron:router@1.0.7', 'client', {weak: true});
 
   api.addFiles(['utils.coffee']);
 

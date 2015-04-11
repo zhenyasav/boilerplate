@@ -2,8 +2,8 @@
 If you're building your app with Coffee and Less, you might find these includes and utilities useful.
 
 # Contents
-- [Less imports](#less-imports)
-	- [all.import.less](#allimportless)
+- [Less imports](README.md#less-imports)
+	- [all.import.less](README.md#allimportless)
 	- [for.import.less](#forimportless)
 	- [clearfix.import.less](#cleafiximportless)
 	- [reset.import.less](#resetimportless)
