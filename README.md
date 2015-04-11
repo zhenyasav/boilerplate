@@ -6,6 +6,13 @@ If you're building your app with Coffee and Less, you might find these includes 
 	- [all.import.less](#allimportless)
 	- [for.import.less](#forimportless)
 	- [clearfix.import.less](#cleafiximportless)
+	- [reset.import.less](#resetimportless)
+	- [colors.import.less](#colorsimportless)
+	- [shades.import.less](#shadesimportless)
+- [Color preview](#color-preview)
+- [Debug CSS](#debug-css)
+- [Utilities](#utilities)
+- [Helpers](#helpers)
 
 # Less imports
 Import `all.import.less` or any one of the stylesheets like this:
@@ -48,14 +55,14 @@ Applies clearfix to all `.foo` elements
 Provides some browser compatible utilities like `.border-radius()`.
 
 
-## reset.import.less
+## [reset.import.less](reset.import.less)
 Provides a basic CSS reset useful for building full screen apps.
 ``` less
 // call this somewhere in your project less
 .reset()
 ```
 
-## colors.import.less
+## [colors.import.less](colors.import.less)
 Provides three functions to generate common color schemes.
 
 #### `.colors();`
@@ -80,7 +87,7 @@ Create a five color complementary color scheme with `@base` as the root color. C
 #### `.triad(@base: #108ee3, @shade: 20%);`
 Create a five color triad color scheme with `@base` as the root color. Colors are accessible using `@one`, `@two`, `@three`, `@four`, and `@five`. `@shade` is used to generate secondary colors from the second two by lighten and desaturate.
 
-## shades.import.less
+## [shades.import.less](shades.import.less)
 Provides a function to generate seven shades and tints between a specific light and a dark color. Helpful for generating a tinted set of shades.
 
 #### `.shades(@w: #fff, @b: #000)`
@@ -95,13 +102,13 @@ Gives access to:
 @black: @b;
 ```
 
-## Color preview
+# [Color preview](swatches/swatches.html)
 To test your available colors, call the templates `{{>_colors}}` and `{{>_shades}}` anywhere to see color swatches.
 
-## Debug CSS
+# [Debug CSS](debug/debug.coffee)
 Unless `Meteor.settings.public.debugCss == false`, pressing `Ctrl+~` (Control + tilde) will show outlines on all dom elements making it easier to inspect structure and CSS problems at a glance.
 
-# Utils
+# [Utilities](utils.coffee)
 Defines (or extends) a global utility `Utils`:
 
 ### `Utils.tag(name)`
@@ -216,7 +223,7 @@ Utils.colors =
 ### `Utils.spellNumber(n)`
 If the number is less than 10, it is spelled in letters like "five". If not, the argument is returned.
 
-# Helpers
+# [Helpers](helpers.coffee)
 The following template helpers are registered globally
 ### `{{key_value obj}}`
 Decomposes `obj` into an array with objects that each have keys `key` and `value`. Useful for decomposing objects or arrays to retrieve keys or indices.
