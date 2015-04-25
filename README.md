@@ -15,7 +15,14 @@ If you're building your app with Coffee and Less, you might find these includes 
 - [Helpers](README.md#helpers)
 
 # Less imports
-Import `all.import.less` or any one of the stylesheets like this:
+Because exporting assets like less files for import in other packages or apps isn't the most graceful pattern in Meteor yet, I recommend adding this package as a submodule to make it easier to include and browse the assets it exports. 
+
+First add this repo as a submodule in your `packages/zhenya:boilerplate` folder like this:
+```
+git submodule add https://github.com/zhenyasav/meteor-boilerplate packages/zhenya\:boilerplate
+```
+
+Then import `all.import.less` or any one of your less stylesheets like this:
 ``` less
 @import '/packages/zhenya:boilerplate/all.import.less';
 ```
