@@ -48,7 +48,7 @@
 		(args...) ->
 			attr = {}
 			last = args[args.length - 1]
-			if last instanceof Element or _.isArray last
+			if last instanceof Node or typeof last is 'string' or _.isArray last
 				content = args.splice(args.length - 1, 1)?[0]
 			for arg in args
 				for key, val of arg 
@@ -58,7 +58,9 @@
 				el.setAttribute a, val
 			if not _.isArray content
 				content = [content]
-			content.map (c) -> el.appendChild c if c instanceof Element
+			content.map (c) -> 
+				el.appendChild c if c instanceof Element
+				el.appendChild new Text c if typeof c is 'string'
 			el
 
 	cssClass: (s) -> s?.toLowerCase?()?.replace? /\s|\./g, '-'
