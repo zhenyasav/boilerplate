@@ -3,9 +3,9 @@ utilHelpers = _.pick Utils, 'pluralize', 'capitalize', 'cssClass', 'spellNumber'
 
 helpers = _.extend utilHelpers, 
 
-	currentRoute: -> Router?.current?()
+	currentRoute: -> Package['iron:router']?.Router?.current?()
 
-	session: (k) -> Session.get k
+	session: (k) -> Package['session']?.Session?.get? k
 	
 	key_value: (context, options) ->
 		result = []

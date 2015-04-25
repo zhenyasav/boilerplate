@@ -1,6 +1,6 @@
 Package.describe({
   name: 'zhenya:boilerplate',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'Less Coffee boilerplate: less imports, utils and helpers',
   git: 'https://github.com/zhenyasav/meteor-boilerplate',
   documentation: 'README.md'
@@ -16,7 +16,7 @@ Package.onUse(function(api) {
     'underscore', 
     'templating']);
 
-  api.use('iron:router@1.0.7', 'client', {weak: true});
+  api.use(['iron:router@1.0.7', 'session'], 'client', {weak: true});
 
   api.addFiles(['utils.coffee']);
 
