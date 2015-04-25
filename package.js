@@ -1,6 +1,6 @@
 Package.describe({
   name: 'zhenya:boilerplate',
-  version: '0.0.3',
+  version: '0.0.4',
   summary: 'Less Coffee boilerplate: less imports, utils and helpers',
   git: 'https://github.com/zhenyasav/meteor-boilerplate',
   documentation: 'README.md'
