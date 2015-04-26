@@ -37,7 +37,9 @@ Package.onUse(function(api) {
     'debug/debug.coffee',
 
     'swatches/swatches.html',
-    'swatches/swatches.coffee'
+    'swatches/swatches.coffee',
+
+    'fonts.html',
 
     ], 'client');
 
