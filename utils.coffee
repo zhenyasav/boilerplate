@@ -13,6 +13,7 @@
 		ctrl: 17
 		alt: 18
 		cmd: 91
+		tab: 9
 
 	colors:
 		orange: '#FF9933'
