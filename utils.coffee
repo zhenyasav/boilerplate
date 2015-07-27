@@ -14,6 +14,7 @@
 		alt: 18
 		cmd: 91
 		tab: 9
+		backspace: 8
 
 	colors:
 		orange: '#FF9933'
