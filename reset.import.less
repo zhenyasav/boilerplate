@@ -33,10 +33,12 @@
   }
 
   .select {
+    @arrow: 24px;
+
     position: relative;
 
     .down-arrow {
-      @arrow: 24px;
+      
 
       position: absolute;
       .pointer-events(none);
@@ -49,6 +51,24 @@
       font-size: @arrow;
       line-height: 100%;
       text-align: center;
+    }
+
+    input[type='date'] {
+      .appearance(none);
+      &::-webkit-inner-spin-button {
+        display: none;
+      }
+      &::-webkit-calendar-picker-indicator {
+        right: 10px;
+        position: absolute;
+        width: @arrow;
+        height: @arrow;
+        padding: 0;
+      }
+
+      &:hover::-webkit-calendar-picker-indicator {
+        opacity: 0;
+      }
     }
   }
 }
