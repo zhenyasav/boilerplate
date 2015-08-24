@@ -19,10 +19,28 @@
     width: 100%;
   }
 
+  a {
+    color: @blue;
+    cursor: pointer;
+    &:visited {
+      color: @blue;
+    }
+  }
+
   body, input, select, textarea, button {
     font-family: "Open Sans", "Droid Sans", sans-serif;
     font-weight: 300;
     font-size: 16px;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid @gray;
   }
 
   @arrow: 5px;
@@ -30,6 +48,10 @@
   select {
     .appearance(none);
     .border-radius(0);
+  }
+
+  table {
+    width: 100%;
   }
 
   .select {
