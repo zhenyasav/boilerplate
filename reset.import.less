@@ -1,42 +1,54 @@
 @import 'utils.import.less';
 
 .reset() {
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-		-webkit-tap-highlight-color: rgba(0,0,0,0);
-	}
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
 
-	html {
-		min-height: 100%;
-		-webkit-text-size-adjust: none;
-	}
+  html {
+    min-height: 100%;
+    -webkit-text-size-adjust: none;
+  }
 
-	body {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-	}
+  body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
 
-	body, input, select, textarea, button {
-		font-family: "Open Sans", "Droid Sans", sans-serif;
-		font-weight: 300;
-		font-size: 16px;
-	}
+  body, input, select, textarea, button {
+    font-family: "Open Sans", "Droid Sans", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+  }
 
-	@arrow: 5px;
+  @arrow: 5px;
 
-	select {
-		.appearance(none);
-		.border-radius(0);
+  select {
+    .appearance(none);
+    .border-radius(0);
+  }
 
-		&:after {
-			content: "";
-			display: inline-block;
-			width: @arrow;
-			height: @arrow;
-			background-color: #ccc;
-		}
-	}
+  .select {
+    position: relative;
+
+    .down-arrow {
+      @arrow: 24px;
+
+      position: absolute;
+      .pointer-events(none);
+      top: 50%;
+      right: 10px;
+      margin-top: -@arrow/2;
+      width: @arrow;
+      height: @arrow;
+      display: inline-block;
+      font-size: @arrow;
+      line-height: 100%;
+      text-align: center;
+    }
+  }
 }

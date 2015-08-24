@@ -16,7 +16,10 @@ Package.onUse(function(api) {
     'underscore', 
     'templating']);
 
-  api.use(['iron:router@1.0.7', 'session'], 'client', {weak: true});
+  api.use([
+    'iron:router@1.0.7', 
+    'session',
+    'lidarian:ionicons-cdn'], 'client', {weak: true});
 
   api.addFiles(['utils.coffee']);
 
@@ -40,6 +43,8 @@ Package.onUse(function(api) {
     'swatches/swatches.coffee',
 
     'fonts.html',
+
+    'components/select.html'
 
     ], 'client');
 
