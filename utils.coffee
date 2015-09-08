@@ -46,6 +46,8 @@
     else
       n
 
+  roundTo: (x, n) -> n * Math.round x / n
+
   tag: (name) ->
     (args...) ->
       attr = {}
@@ -68,6 +70,18 @@
   cssClass: (s) -> s?.toLowerCase?()?.replace? /\s|\./g, '-'
 
   delay: (d, f) -> Meteor.setTimeout f, d
+
+  parseDate: (v) ->
+    parts = v.split '-'
+    moment()
+    .hour 0
+    .minute 0
+    .second 0
+    .millisecond 0
+    .year Number parts[0]
+    .month -1 + Number parts[1]
+    .date Number parts[2]
+    .toDate()
 
   capitalize: (s) -> if s?.length then s[0].toUpperCase() + s.slice 1 else s
 

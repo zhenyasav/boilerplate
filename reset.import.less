@@ -61,7 +61,6 @@
 
     .down-arrow {
       
-
       position: absolute;
       .pointer-events(none);
       top: 50%;
@@ -78,6 +77,9 @@
     input[type='date'] {
       .appearance(none);
       &::-webkit-inner-spin-button {
+        display: none;
+      }
+      &::-webkit-clear-button {
         display: none;
       }
       &::-webkit-calendar-picker-indicator {
